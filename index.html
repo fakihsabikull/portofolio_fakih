@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakih Sabikul Hoer - Portofolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.12);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .avatar-glow {
+            box-shadow: 0 0 40px -8px rgba(56, 189, 248, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#home" class="font-bold text-lg tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-sky-400 animate-pulse"></span>
+                FAKIH<span class="text-sky-400">.</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-sky-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-sky-500/20">
+                <span>Hubungi Saya</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Home) -->
+    <section id="home" class="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-900/20 via-slate-950/50 to-slate-950 pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 flex flex-col items-center">
+            
+            <!-- Avatar / Foto Profil -->
+            <div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1 bg-gradient-to-tr from-sky-400 via-blue-600 to-indigo-500 avatar-glow mb-8">
+                <div class="w-full h-full rounded-full overflow-hidden bg-slate-900">
+                    <!-- Pastikan nama file foto di folder sama persis dengan foto.jpe -->
+                    <img src="foto.jpe" alt="Fakih Sabikul Hoer" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+                Halo, Saya <br class="hidden sm:inline" />
+                <span class="gradient-text">Fakih Sabikul Hoer</span>
+            </h1>
+
+            <!-- Subtitle / Role -->
+            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+                Junior Web Developer lulusan Rekayasa Perangkat Lunak SMKN 1 Kawali. Berpengalaman dalam merancang antarmuka aplikasi, pengelolaan basis data MySQL, dan pengembangan sistem web berbasis PHP & Laravel.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2 group">
+                    <span>Lihat Hasil Proyek</span>
+                    <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card hover:bg-slate-800/80 text-white font-semibold text-sm transition-all border border-slate-700 flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-envelope text-sky-400"></i>
+                    <span>Kontak Saya</span>
+                </a>
+            </div>
+
+            <!-- Tech Stack Badges -->
+            <div class="mt-16 pt-8 border-t border-slate-800/80 max-w-xl w-full">
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-4">Core Tech Stack</p>
+                <div class="flex flex-wrap justify-center items-center gap-3 text-sm text-slate-300">
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center gap-2"><i class="fa-brands fa-php text-indigo-400"></i> PHP</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center gap-2"><i class="fa-solid fa-fire text-red-500"></i> Laravel</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center gap-2"><i class="fa-solid fa-database text-sky-400"></i> MySQL</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center gap-2"><i class="fa-brands fa-js text-yellow-400"></i> JavaScript</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center gap-2"><i class="fa-brands fa-html5 text-orange-500"></i> Tailwind CSS</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative bg-slate-900/40 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Tentang <span class="gradient-text">Saya</span></h2>
+                <p class="text-slate-400 text-sm sm:text-base">Latar belakang pendidikan, pengalaman PKL, kepemimpinan, serta keahlian teknis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Profile Image & Info Card -->
+                <div class="lg:col-span-5 flex flex-col items-center">
+                    <div class="w-full max-w-sm rounded-2xl overflow-hidden glass-card p-4 border border-slate-800 shadow-2xl">
+                        <div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative">
+                            <img src="foto.jpe" alt="Fakih Sabikul Hoer" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <span class="px-2.5 py-1 rounded-md bg-sky-500/20 text-sky-300 border border-sky-500/30 text-xs font-medium">Fresh Graduate RPL</span>
+                                <h3 class="text-lg font-bold text-white mt-1">Fakih Sabikul Hoer</h3>
+                                <p class="text-xs text-slate-300"><i class="fa-solid fa-location-dot text-sky-400 mr-1"></i> Ciamis, Jawa Barat</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-xs text-slate-300 px-2">
+                            <div class="flex justify-between py-1 border-b border-slate-800">
+                                <span class="text-slate-400">Pendidikan:</span>
+                                <span class="font-medium text-white">SMKN 1 Kawali (PPLG)</span>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-800">
+                                <span class="text-slate-400">Pengalaman PKL:</span>
+                                <span class="font-medium text-white">PT Inovindo Digital Media</span>
+                            </div>
+                            <div class="flex justify-between py-1">
+                                <span class="text-slate-400">Organisasi:</span>
+                                <span class="font-medium text-white">Ketua OSIS Gen 21</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Detailed Information -->
+                <div class="lg:col-span-7 space-y-8">
+                    
+                    <!-- Bio Description -->
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-user-tie text-sky-400 text-sm"></i> Profil Profesional
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Junior Web Developer lulusan Rekayasa Perangkat Lunak SMKN 1 Kawali. Memiliki pengalaman dalam merancang antarmuka aplikasi, pengelolaan basis data MySQL, dan pengintegrasian sistem web berbasis PHP dan Laravel. Memiliki latar belakang kepemimpinan sebagai Ketua OSIS serta berpengalaman menjalankan proyek aplikasi web sekolah dan PKL di industri digital.
+                        </p>
+                    </div>
+
+                    <!-- Skills Matrix -->
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-code text-sky-400 text-sm"></i> Keahlian Teknis & Soft Skills
+                        </h3>
+                        <div class="space-y-4 text-sm">
+                            <div>
+                                <span class="text-slate-400 block mb-2 font-medium">Hard Skills:</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-lg bg-sky-950/60 text-sky-300 border border-sky-800/50">PHP</span>
+                                    <span class="px-3 py-1 rounded-lg bg-sky-950/60 text-sky-300 border border-sky-800/50">Laravel</span>
+                                    <span class="px-3 py-1 rounded-lg bg-sky-950/60 text-sky-300 border border-sky-800/50">MySQL</span>
+                                    <span class="px-3 py-1 rounded-lg bg-sky-950/60 text-sky-300 border border-sky-800/50">Database Management</span>
+                                    <span class="px-3 py-1 rounded-lg bg-sky-950/60 text-sky-300 border border-sky-800/50">REST API</span>
+                                    <span class="px-3 py-1 rounded-lg bg-sky-950/60 text-sky-300 border border-sky-800/50">HTML & CSS</span>
+                                    <span class="px-3 py-1 rounded-lg bg-sky-950/60 text-sky-300 border border-sky-800/50">Tailwind CSS</span>
+                                    <span class="px-3 py-1 rounded-lg bg-sky-950/60 text-sky-300 border border-sky-800/50">VS Code & Laragon</span>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <span class="text-slate-400 block mb-2 font-medium">Soft Skills:</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300">Problem Solving</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300">Logika Backend</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300">Kepemimpinan</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300">Kerja Sama Tim</span>
+                                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300">Manajemen Waktu & Proyek</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Portofolio & <span class="gradient-text">Proyek</span></h2>
+                <p class="text-slate-400 text-sm sm:text-base">Daftar proyek dan pengalaman kerja nyata yang telah diselesaikan.</p>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: PKL PT Inovindo Digital Media -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-sky-500/50 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="p-6 pb-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">Pengalaman Industri</span>
+                                <i class="fa-solid fa-briefcase text-slate-500 group-hover:text-sky-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">PKL - Web Developer</h3>
+                            <p class="text-xs text-sky-400 font-medium mb-3">PT Inovindo Digital Media</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Melaksanakan Praktik Kerja Lapangan dalam pengembangan dan pemeliharaan sistem web. Berkontribusi dalam tim pengembang untuk meningkatkan efisiensi kode dan struktur basis data.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 text-xs text-slate-300">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Web Dev</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Teamwork</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Database</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Company Profile Ujikom -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-sky-500/50 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="p-6 pb-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-semibold border border-sky-500/20">Ujikom / Tugas Akhir</span>
+                                <i class="fa-solid fa-globe text-slate-500 group-hover:text-sky-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">Web Company Profile</h3>
+                            <p class="text-xs text-sky-400 font-medium mb-3">SMKN 1 Kawali</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Membangun dan mengimplementasikan sistem web profil perusahaan interaktif berbasis Laravel. Memastikan performa basis data yang cepat serta keamanan sistem backend yang handal.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 text-xs text-slate-300">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Laravel</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">PHP</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Web Pengaduan & Keluhan Siswa -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-sky-500/50 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="p-6 pb-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold border border-indigo-500/20">Aplikasi Web</span>
+                                <i class="fa-solid fa-comments text-slate-500 group-hover:text-sky-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">Web Pengaduan Siswa</h3>
+                            <p class="text-xs text-sky-400 font-medium mb-3">Sistem Aspirasi Sekolah</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Mengembangkan aplikasi web untuk mengelola aspirasi dan pelaporan pengaduan siswa secara transparan dan terstruktur menggunakan PHP dan MySQL.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 text-xs text-slate-300">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">PHP</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">MySQL</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Organisasi & Kepemimpinan Section -->
+            <div class="mt-16 glass-card p-8 rounded-2xl border border-slate-800">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400">
+                        <i class="fa-solid fa-users-rectangle"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Pengalaman Organisasi & Kepemimpinan</h3>
+                        <p class="text-xs text-slate-400">Kontribusi aktif dalam kegiatan sekolah dan manajemen organisasi</p>
+                    </div>
+                </div>
+                <div class="space-y-3 text-sm text-slate-300">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-800">
+                        <span class="font-semibold text-white">Ketua OSIS (Periode 2025/2026) – SMKN 1 Kawali</span>
+                        <span class="text-xs text-sky-400 mt-1 sm:mt-0">Gen 21</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-400 text-xs sm:text-sm pl-2">
+                        <li>Memimpin seluruh pengurus OSIS dalam merencanakan, mengorganisasikan, dan mengeksekusi berbagai program kerja serta kegiatan besar sekolah.</li>
+                        <li>Bertanggung jawab dalam manajemen tim, komunikasi lintas organisasi (MPK & Ekstrakurikuler), dan penyusunan jadwal kegiatan.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative bg-slate-900/40 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Mari <span class="gradient-text">Terhubung</span></h2>
+                <p class="text-slate-400 text-sm sm:text-base">Tertarik berkolaborasi atau ingin mendiskusikan peluang kerja? Jangan ragu untuk menghubungi saya.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Contact Info -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Informasi Kontak</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Saya terbuka untuk kesempatan magang, posisi Junior Web Developer, maupun proyek freelance pembuatan website.
+                        </p>
+                        
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-sky-400 flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">Email</span>
+                                    <span class="font-medium">fakihsabikull@gmail.com</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-sky-400 flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">Telepon / WhatsApp</span>
+                                    <span class="font-medium">+62 812-2419-2112</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-sky-400 flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">Lokasi</span>
+                                    <span class="font-medium">Ciamis, Jawa Barat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="pt-6 border-t border-slate-800 flex items-center gap-3">
+                        <a href="https://github.com/fakihsabikull" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-500/50 transition-all">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-500/50 transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card p-8 rounded-2xl">
+                    <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda berhasil dikirim.');">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Nama Lengkap</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-sky-500 transition-colors" placeholder="Masukkan nama Anda">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-sky-500 transition-colors" placeholder="nama@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Pesan</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-sky-500 transition-colors resize-none" placeholder="Tuliskan pesan atau tawaran kerja..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-sky-500/20 flex items-center justify-center gap-2">
+                            <span>Kirim Pesan</span>
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-900 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Fakih Sabikul Hoer. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
